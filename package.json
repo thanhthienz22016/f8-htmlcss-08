@@ -1,0 +1,21 @@
+{
+  "name": "f8-project-08",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss:assets/css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanhthienz22016/f8-htmlcss-08.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thanhthienz22016/f8-htmlcss-08/issues"
+  },
+  "homepage": "https://github.com/thanhthienz22016/f8-htmlcss-08#readme",
+  "description": ""
+}
