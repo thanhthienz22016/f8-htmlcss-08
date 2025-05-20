@@ -1234,6 +1234,11 @@ html.dark {
     width: 100px;
   }
 }
+@media (max-width: 575.98px) {
+  .header {
+    width: 50px;
+  }
+}
 
 .navbar {
   margin-left: 144px;

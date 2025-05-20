@@ -13,6 +13,9 @@
         width: 100px;
     }
 
+    @include abstracts.breakpoint(sm) {
+        width: 50px;
+    }
     // @include abstracts.breakpoint(ss) {
     //     width: 50px;
     // }

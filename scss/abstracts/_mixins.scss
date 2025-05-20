@@ -14,6 +14,6 @@ $grid-breakpoints: (
             @content;
         }
     } @else {
-        @error "The value #{$key} is not in breakpoints list.";
+        @error "The value #{$key} is not in breakpoint list.";
     }
 }
