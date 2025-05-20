@@ -18,6 +18,7 @@
     }
 
     @include abstracts.breakpoint(sm) {
+        justify-content: space-between;
         padding: 16px 0;
     }
 
@@ -63,6 +64,9 @@
     @extend %flexItemCenter;
     margin-left: auto;
     column-gap: 20px;
+    @include abstracts.breakpoint(sm) {
+        margin-left: 0;
+    }
 
     &__group {
         @extend %flexItemCenter;

@@ -143,6 +143,7 @@ body {
   font-size: 1.6rem;
   font-family: "Gordita", sans-serif;
   color: var(--text-color);
+  background-color: var(--body-bg);
 }
 
 a {
@@ -1204,16 +1205,23 @@ html {
   --text-color: #1a162e;
   --icon-color: brightness(0) saturate(100%) invert(8%) sepia(8%)
       saturate(4700%) hue-rotate(211deg) brightness(99%) contrast(96%);
+  --body-bg: #f6f6f6;
   --header-bg-color: #eee;
   --top-act-group-bg-color: #fff;
   --top-act-group-shadow: rgba(237, 237, 246, 0.2);
   --top-act-group-separate: #ededf6;
+}
+@media (max-width: 991.98px) {
+  html {
+    --header-bg-color: #fff;
+  }
 }
 
 html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
       saturate(3485%) hue-rotate(196deg) brightness(116%) contrast(101%);
+  --body-bg: #292e39;
   --header-bg-color: #171c28;
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
@@ -1239,6 +1247,7 @@ html.dark {
 }
 @media (max-width: 575.98px) {
   .top-bar {
+    justify-content: space-between;
     padding: 16px 0;
   }
 }
@@ -1281,6 +1290,11 @@ html.dark {
 .top-act {
   margin-left: auto;
   column-gap: 20px;
+}
+@media (max-width: 575.98px) {
+  .top-act {
+    margin-left: 0;
+  }
 }
 .top-act__group {
   min-width: 50px;
@@ -1337,8 +1351,13 @@ html.dark {
 }
 @media (max-width: 991.98px) {
   .logo {
-    margin-left: 39px;
+    margin-left: 40px;
     column-gap: 10px;
+  }
+}
+@media (max-width: 575.98px) {
+  .logo {
+    margin-left: 0px;
   }
 }
 .logo__title {

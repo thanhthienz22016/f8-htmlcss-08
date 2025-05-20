@@ -5,8 +5,12 @@
     align-items: center;
     column-gap: 14px;
     @include abstracts.breakpoint(lg) {
-        margin-left: 39px;
+        margin-left: 40px;
         column-gap: 10px;
+    }
+
+    @include abstracts.breakpoint(sm) {
+        margin-left: 0px;
     }
 
     &__title {
