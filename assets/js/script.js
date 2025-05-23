@@ -65,10 +65,6 @@ function debounce(func, timeout = 300) {
     };
 }
 
-
-
-
-
 /**
  * Hàm tính toán vị trí arrow cho dropdown
  *
@@ -92,10 +88,6 @@ window.addEventListener("resize", calArrowPos);
 
 // Tính toán lại vị trí arrow sau khi tải template
 window.addEventListener("template-loaded", calArrowPos);
-
-
-
-
 
 /**
  * Giữ active menu khi hover
@@ -122,13 +114,19 @@ function handleActiveMenu() {
             if (!items.length) return;
 
             removeActive(menu);
-            items[0].classList.add(activeClass);
+            if (window.innerWidth > 991) items[0].classList.add(activeClass);
 
             Array.from(items).forEach((item) => {
                 item.onmouseenter = () => {
                     if (window.innerWidth <= 991) return;
                     removeActive(menu);
                     item.classList.add(activeClass);
+                };
+                item.onclick = () => {
+                    if (window.innerWidth > 991) return;
+                    removeActive(menu);
+                    item.classList.add(activeClass);
+                    item.scrollIntoView();
                 };
             });
         });
@@ -141,15 +139,13 @@ function handleActiveMenu() {
     });
 }
 
-
-
 /**
  * JS toggle
  *
  * Cách dùng:
  * <button class="js-toggle" toggle-target="#box">Click</button>
  * <div id="box">Content show/hide</div>
- **/
+ */
 window.addEventListener("template-loaded", initJsToggle);
 
 function initJsToggle() {
@@ -171,3 +167,4 @@ function initJsToggle() {
         };
     });
 }
+
