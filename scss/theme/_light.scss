@@ -44,4 +44,9 @@ html {
     --filter-form-bg: #fff;
     --filter-form-shadow: rgba(200, 200, 200, 0.4);
     --filter-form-tag-bg: #f8f8fb;
+
+    // Footer
+    --footer-bg-color: var(--header-bg-color);
+    --footer-item-color-hover: #0071dc;
+    --footer-separate-bg-color: #a19f9f;
 }
