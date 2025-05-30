@@ -8,6 +8,7 @@
     &__intro,
     &__content {
         flex: 1;
+        padding: 0 30px;
     }
 
     &__intro {
@@ -16,6 +17,26 @@
         justify-content: center;
         flex-direction: column;
         gap: 50px;
+        position: relative;
+
+        &-logo,
+        &-next {
+            position: absolute;
+            left: 50%;
+            translate: -50%;
+        }
+
+        &-logo {
+            top: 80px;
+        }
+
+        &-next {
+            bottom: 50px;
+        }
+
+        &-img {
+            max-width: 100%;
+        }
 
         &-text {
             max-width: 412px;
@@ -28,6 +49,18 @@
 
     &__content {
         background: var(--auth-cotent-bg);
+
+        @include abstracts.screen(md) {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            transition: translate 0.3s;
+            overflow-y: auto;
+
+            &.hide {
+                translate: 100%;
+            }
+        }
 
         &-inner {
             display: flex;

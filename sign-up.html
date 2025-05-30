@@ -38,14 +38,27 @@
     <main class="auth">
         <!-- Auth intro -->
         <div class="auth__intro">
+            <a href="./">
+                <div class="logo auth__intro-logo d-none d-md-flex">
+                    <img src="./assets/icons/logo.svg" alt="Grocerymart" class="logo__img">
+                    <h1 class="logo__title">
+                        grocerymart
+                    </h1>
+                </div>
+            </a>
+
             <img src="./assets/img/auth/intro.svg" alt="" class="auth__intro-img">
             <p class="auth__intro-text">
                 The best of luxury brand values, high quality products, and innovative services
             </p>
+
+            <button class="auth__intro-next d-none d-md-block js-toggle" toggle-target="#auth-content">
+                <img src="./assets/img/auth/intro-arrow.svg" alt="">
+            </button>
         </div>
 
         <!-- Auth content -->
-        <div class="auth__content">
+        <div id="auth-content" class="auth__content hide">
             <div class="auth__content-inner">
                 <!-- Logo -->
                 <a href="./">
@@ -66,24 +79,25 @@
                 </p>
 
                 <!-- Form Sign up -->
-                <form action="" class="form auth__form">
+                <form action="./index-logined.html" class="form auth__form" autocomplete="off">
                     <div class="form__group">
                         <div class="form__text-input">
-                            <input type="email" name="" id="" class="form__input" placeholder="Email">
+                            <input type="email" name="" id="" class="form__input" placeholder="Email" required>
                             <img src="./assets/icons/message.svg" alt="" class="form__input-icon">
                         </div>
                     </div>
 
                     <div class="form__group">
                         <div class="form__text-input">
-                            <input type="password" name="" id="" class="form__input" placeholder="Password">
+                            <input type="password" name="" id="" class="form__input" placeholder="Password" required>
                             <img src="./assets/icons/lock.svg" alt="" class="form__input-icon">
                         </div>
                     </div>
 
                     <div class="form__group">
                         <div class="form__text-input">
-                            <input type="password" name="" id="" class="form__input" placeholder="Confirm Password">
+                            <input type="password" name="" id="" class="form__input" placeholder="Confirm Password"
+                                required>
                             <img src="./assets/icons/lock.svg" alt="" class="form__input-icon">
                         </div>
                     </div>
@@ -118,6 +132,9 @@
             </div>
         </div>
     </main>
+    <script>
+        window.dispatchEvent(new Event("template-loaded"))
+    </script>
 </body>
 
 </html>
