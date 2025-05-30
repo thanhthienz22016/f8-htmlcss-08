@@ -40,6 +40,7 @@
 .btn {
     display: flex;
     align-items: center;
+    justify-content: center;
 
     height: 46px;
     border-radius: 6px;
@@ -52,7 +53,9 @@
     user-select: none;
 
     & + .btn {
-        margin-left: 20px;
+        &:not(.btn--no-margin) {
+            margin-left: 20px;
+        }
     }
 
     &--text {
@@ -68,7 +71,7 @@
 
     &--outline {
         background: transparent;
-        border: 1px solod #d2d1d6;
+        border: 1px solid #d2d1d6;
     }
 
     &--rounded {
