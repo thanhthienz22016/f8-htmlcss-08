@@ -1653,12 +1653,22 @@ html.dark {
   display: flex;
   column-gap: 15px;
 }
+@media (max-width: 767.98px) {
+  .footer__socials {
+    column-gap: 30px;
+  }
+}
 .footer__social {
   width: 20px;
   transition: translate 0.3s;
 }
 .footer__social:hover {
   translate: 0 -2px;
+}
+@media (max-width: 767.98px) {
+  .footer__social-icon {
+    width: 30px;
+  }
 }
 .footer__col-wrap {
   display: flex;
@@ -1673,7 +1683,7 @@ html.dark {
 @media (max-width: 767.98px) {
   .footer__col-wrap {
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 45px;
   }
 }
 .footer__heading {
@@ -2359,7 +2369,7 @@ html.dark {
 }
 @media (max-width: 575.98px) {
   .filter__form-input {
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
   }
 }
 .filter__form-input-icon {

@@ -36,6 +36,9 @@
         margin-top: 20px;
         display: flex;
         column-gap: 15px;
+        @include abstracts.screen(md) {
+            column-gap: 30px;
+        }
     }
 
     &__social {
@@ -43,6 +46,12 @@
         transition: translate 0.3s;
         &:hover {
             translate: 0 -2px;
+        }
+    }
+
+    &__social-icon {
+        @include abstracts.screen(md) {
+            width: 30px;
         }
     }
 
@@ -57,7 +66,7 @@
 
         @include abstracts.screen(md) {
             flex-direction: column;
-            row-gap: 20px;
+            row-gap: 45px;
         }
     }
 
