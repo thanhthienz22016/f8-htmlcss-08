@@ -51,14 +51,30 @@ html.dark {
     --auth-intro-bg: #171c28;
     --auth-intro-text-color: #b9babe;
     --auth-heading-color: #b9babe;
+    --product-detail-tag-bg: #292e39;
 
     // Form
     --form-placeholder-color: #b9babe;
 
     // Product detail
     --product-detail-bg: #292e39;
+    --product-detail-info-bg: #171c28;
+    --prod-detail-info-content-bg: transparent;
+
+    @include abstracts.screen(md) {
+        --product-detail-bg: #292e39;
+        --product-detail-info-bg: transparent;
+        --prod-detail-info-content-bg: #171c28;
+    }
 
     // Breadcrumbs
     --breadcrumbs-bg: #171c28;
     --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
+
+    @include abstracts.screen(md) {
+        --breadcrumbs-bg: #171c28;
+    }
+
+    // Search bar
+    --search-bar-bg: #171c28;
 }

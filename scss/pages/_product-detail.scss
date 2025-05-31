@@ -10,11 +10,15 @@
 
 .product-container {
     margin-top: 30px;
+
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
 }
 
 .prod-info-content {
     border-radius: 20px;
-    background: #fff;
+    background: var(--prod-detail-info-content-bg);
 }
 
 .prod-preview {
@@ -78,13 +82,13 @@
         border: 1.5px solid rgb(158, 157, 168, 0.3);
         border-radius: 8px;
         opacity: 0.9;
-        cursor: pointer;
         transition: opacity, border-color;
         transition-duration: 0.3s;
 
-        &:hover {
+        &:not(&--current):hover {
             opacity: 1;
             border-color: #9e9da8;
+            cursor: pointer;
         }
 
         &--current {
@@ -96,6 +100,7 @@
 
 .prod-info {
     padding: 60px;
+    border-radius: 10px;
     background: var(--product-detail-info-bg);
 
     @include abstracts.screen(xxl) {
@@ -119,7 +124,7 @@
     }
 
     &__tag {
-        background: #ededf6;
+        background: var(--product-detail-tag-bg);
     }
 
     &__label {
@@ -147,12 +152,9 @@
     &__tax {
         margin-left: 10px;
         padding: 2px 8px;
-
-        background: var(
-            --Green-Green-20,
-            linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%),
-            #67b044
-        );
+        border-radius: 4px;
+        line-height: 1.42;
+        background: rgb(103 176 68 / 20%);
         font-size: 1.4rem;
         font-weight: 500;
         color: #67b044;
@@ -195,10 +197,6 @@
     display: flex;
     gap: 16px;
     margin-top: 30px;
-
-    @include abstracts.screen(md) {
-        margin-top: 20px;
-    }
 
     &__icon {
         align-self: flex-start;
