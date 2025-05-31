@@ -18,10 +18,4 @@
         font-weight: 700;
         line-height: 1.45;
     }
-
-    &__img {
-        @include abstracts.screen(lg) {
-            width: 24px;
-        }
-    }
 }
