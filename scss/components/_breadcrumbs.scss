@@ -16,9 +16,6 @@
     background: var(--breadcrumbs-bg);
     box-shadow: 0px 20px 60px 10px var(--breadcrumbs-shadow);
 
-    &-item {
-    }
-
     &__link {
         display: flex;
         align-items: center;
@@ -39,8 +36,5 @@
         &--curent {
             color: inherit;
         }
-    }
-
-    &__icon {
     }
 }
