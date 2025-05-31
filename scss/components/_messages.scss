@@ -1,0 +1,15 @@
+@use "../abstracts";
+
+.message {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: left;
+
+    &--success {
+        background: #bfe9cf;
+        border: 1.5px solid #2fea7733;
+    }
+}
