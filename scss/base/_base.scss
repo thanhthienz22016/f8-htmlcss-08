@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -68,11 +72,6 @@ i {
 strong,
 b {
     font-weight: 600;
-}
-
-a {
-    color: #ffb700;
-    text-decoration: underline;
 }
 
 blockquote {

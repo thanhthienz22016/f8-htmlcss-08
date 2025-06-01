@@ -135,6 +135,10 @@ table {
   box-sizing: border-box;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -197,11 +201,6 @@ i {
 strong,
 b {
   font-weight: 600;
-}
-
-a {
-  color: #ffb700;
-  text-decoration: underline;
 }
 
 blockquote {
@@ -2797,6 +2796,9 @@ html.dark {
 }
 
 .review-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 30px;
   border-radius: 16px;
   background: var(--review-card-bg);
@@ -2805,6 +2807,22 @@ html.dark {
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 1199.98px) {
+  .review-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .review-card__content {
+    flex-direction: row;
+    align-items: initial;
+    text-align: initial;
+  }
 }
 .review-card__avatar {
   width: 80px;
@@ -2825,13 +2843,28 @@ html.dark {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: 20px;
+  margin-top: auto;
+}
+@media (max-width: 1199.98px) {
+  .review-card__rating {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767.98px) {
+  .review-card__rating {
+    flex-direction: row;
+  }
 }
 .review-card__rating-title {
   margin-left: 12px;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.44;
+}
+.review-card__star-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .text-content {
@@ -2878,6 +2911,10 @@ html.dark {
 .text-content ol,
 .text-content table {
   margin: 20px 0;
+}
+.text-content a {
+  color: #ffb700;
+  text-decoration: underline;
 }
 .text-content img {
   display: block;
@@ -3298,7 +3335,13 @@ html.dark {
 .prod-tab__list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0 -30px;
+}
+@media (max-width: 767.98px) {
+  .prod-tab__list {
+    margin: 0 -20px;
+  }
 }
 .prod-tab__item {
   padding: 0 30px;
@@ -3307,12 +3350,25 @@ html.dark {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 1.45;
+  user-select: none;
+  white-space: nowrap;
+}
+@media (max-width: 767.98px) {
+  .prod-tab__item {
+    padding: 8px 20px;
+    font-size: 1.8rem;
+  }
+}
+.prod-tab__item:not(.prod-tab__item--current) {
+  cursor: pointer;
 }
 .prod-tab__item--current {
   color: inherit;
-  font-weight: 500;
 }
-.prod-tab__contents {
+.prod-tab__item .prod-tab__contents {
+  padding-top: 30px;
+}
+.prod-tab__content {
   padding-top: 30px;
 }
 .prod-tab__content {

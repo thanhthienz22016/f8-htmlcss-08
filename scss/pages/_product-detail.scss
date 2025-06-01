@@ -219,8 +219,12 @@
     &__list {
         display: flex;
         align-items: center;
-
+        flex-wrap: wrap;
         margin: 0 -30px;
+
+        @include abstracts.screen(md) {
+            margin: 0 -20px;
+        }
     }
 
     &__item {
@@ -230,14 +234,28 @@
         font-size: 2.2rem;
         font-weight: 500;
         line-height: 1.45;
+        user-select: none;
+        white-space: nowrap;
+
+        @include abstracts.screen(md) {
+            padding: 8px 20px;
+            font-size: 1.8rem;
+        }
+
+        &:not(&--current) {
+            cursor: pointer;
+        }
+
+        &--current {
+            color: inherit;
+        }
     }
 
-    &__item--current {
-        color: inherit;
-        font-weight: 500;
+    &__item &__contents {
+        padding-top: 30px;
     }
 
-    &__contents {
+    &__content {
         padding-top: 30px;
     }
 
