@@ -73,20 +73,3 @@ strong,
 b {
     font-weight: 600;
 }
-
-blockquote {
-    background: rgb(255 183 0 / 10%);
-    padding: 20px;
-    border-left: 3px solid #ffb700;
-
-    p {
-        margin: 0 !important;
-    }
-}
-
-hr {
-    border: none;
-    height: 1.5px;
-    margin: 40px 0;
-    background: #ebebeb;
-}

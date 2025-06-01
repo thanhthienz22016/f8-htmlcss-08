@@ -266,13 +266,17 @@
     &__content--current {
         display: block;
     }
+
+    &__text-content {
+        margin-top: -20px;
+    }
 }
 
 .prod-content {
     &__heading {
         margin-bottom: 30px;
-        font-size: 2.4rem;
-        font-weight: 700;
+        font-size: 2.2rem;
+        font-weight: 600;
         line-height: 1.41;
     }
 }

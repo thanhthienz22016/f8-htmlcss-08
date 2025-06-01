@@ -47,8 +47,25 @@
     }
 
     a {
-        color: #ffb700;
+        color: #0071dc;
         text-decoration: underline;
+    }
+
+    blockquote {
+        background: rgba($color: #77dae6, $alpha: 0.1);
+        padding: 20px;
+        border-left: 3px solid #77dae6;
+
+        p {
+            margin: 0 !important;
+        }
+    }
+
+    hr {
+        border: none;
+        height: 1.5px;
+        margin: 40px 0;
+        background: var(--text-content-hr-bg);
     }
 
     img {
