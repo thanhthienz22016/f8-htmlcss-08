@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
 
 <head>
     <meta charset="UTF-8">
@@ -128,7 +128,8 @@
                                                     <img class="icon" src="./assets/icons/heart-2.svg" alt="">
                                                     Save
                                                 </button>
-                                                <button class="cart-item__ctrl-btn">
+                                                <button class="cart-item__ctrl-btn js-toggle"
+                                                    toggle-target="#delete-confirm">
                                                     <img class="icon" src="./assets/icons/trash.svg" alt="">
                                                     Delete
                                                 </button>
@@ -186,8 +187,9 @@
                                                     <img class="icon" src="./assets/icons/heart-2.svg" alt="">
                                                     Save
                                                 </button>
-                                                <button class="cart-item__ctrl-btn">
-                                                    <img class="icon" src="./assets/icons/trash.svg" alt="">
+                                                <button class="cart-item__ctrl-btn js-toggle"
+                                                    toggle-target="#delete-confirm">
+                                                    <img class=" icon" src="./assets/icons/trash.svg" alt="">
                                                     Delete
                                                 </button>
                                             </div>
@@ -244,7 +246,8 @@
                                                     <img class="icon" src="./assets/icons/heart-2.svg" alt="">
                                                     Save
                                                 </button>
-                                                <button class="cart-item__ctrl-btn">
+                                                <button class="cart-item__ctrl-btn js-toggle "
+                                                    toggle-target="#delete-confirm">
                                                     <img class="icon" src="./assets/icons/trash.svg" alt="">
                                                     Delete
                                                 </button>
@@ -345,6 +348,29 @@
     <script>
         load("#footer", "./templates/footer.html")
     </script>
+
+    <!-- Dialog / modal -->
+    <div class="dialog hide" id="delete-confirm">
+        <div class="dialog__content">
+            <div class="dialog__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+            </div>
+            <div class="dialog__bottom">
+                <button class="btn btn--small btn--text dialog__btn js-toggle" toggle-target="#delete-confirm">
+                    Cancel
+                </button>
+
+                <button class="btn btn--small btn--primary dialog__btn btn--no-margin js-toggle"
+                    toggle-target="#delete-confirm">
+                    Confirm
+                </button>
+            </div>
+        </div>
+
+        <div class="dialog__overlay js-toggle" toggle-target="#delete-confirm">
+
+        </div>
+    </div>
 </body>
 
 </html>
