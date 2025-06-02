@@ -2408,7 +2408,6 @@ html.dark {
 }
 .btn--small {
   height: 40px;
-  padding: 0 16px;
 }
 .btn + .btn:not(.btn--no-margin) {
   margin-left: 20px;
@@ -3792,6 +3791,9 @@ html.dark {
   font-weight: 500;
   line-height: 1.46;
 }
+.cart-item__input-btn {
+  display: flex;
+}
 .cart-item__total-price {
   text-align: right;
   font-size: 2.2rem;
@@ -3847,6 +3849,21 @@ html.dark {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+}
+@media (max-width: 767.98px) {
+  .user-address__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.user-address__btn {
+  gap: 10px;
+}
+@media (max-width: 767.98px) {
+  .user-address__btn {
+    height: 46px;
+  }
 }
 .user-address__title {
   font-size: 1.8rem;
@@ -3858,12 +3875,23 @@ html.dark {
   font-size: 1.5rem;
   line-height: 1.46;
 }
-.user-address__btn {
-  gap: 10px;
+.user-address__message {
+  margin-top: 30px;
+  font-weight: 500;
 }
+.user-address__link {
+  color: #0071dc;
+}
+
 .address-card {
   margin-top: 30px;
   display: flex;
+  gap: 16px;
+}
+@media (max-width: 767.98px) {
+  .address-card {
+    flex-direction: column;
+  }
 }
 .address-card__left {
   flex: 1;
@@ -3876,6 +3904,7 @@ html.dark {
   line-height: 1.44;
 }
 .address-card__desc {
+  width: min(520px, 90%);
   margin-top: 4px;
   font-size: 1.5rem;
   line-height: 1.46;
@@ -3888,6 +3917,12 @@ html.dark {
   line-height: 1.42;
   list-style: disc inside;
 }
+@media (max-width: 575.98px) {
+  .address-card__list {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
 .address-card__list-item {
   margin-left: 8px;
 }
@@ -3899,6 +3934,18 @@ html.dark {
 .address-card__ctrl-btn {
   font-size: 1.8rem;
   line-height: 1.44;
+}
+.address-card__checkbox-input {
+  appearance: none;
+}
+.address-card__checkbox-input::before {
+  content: url(../icons/checkbox-uncheck.svg);
+}
+.address-card__checkbox-input:not(:checked)::before {
+  filter: var(--icon-color);
+}
+.address-card__checkbox-input:checked::before {
+  content: url(../icons/checkbox-checked.svg);
 }
 
 /*# sourceMappingURL=main.css.map */

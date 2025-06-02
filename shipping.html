@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -60,14 +60,14 @@
                 <!-- Breadcrumbs -->
                 <ul class="breadcrumbs checkout-page__breadcrumbs">
                     <li>
-                        <a href="#!" class="breadcrumbs__link">
+                        <a href="./" class="breadcrumbs__link">
                             Home
                             <img class="icon" src="./assets/icons/arrow-right.svg" alt="">
                         </a>
                     </li>
 
                     <li>
-                        <a href="#!" class="breadcrumbs__link">
+                        <a href="./checkout.html" class="breadcrumbs__link">
                             Checkout
                             <img class="icon" src="./assets/icons/arrow-right.svg" alt="">
                         </a>
@@ -103,18 +103,27 @@
                                             Where should we deliver your order?
                                         </p>
                                     </div>
-                                    <button class="user-address__btn btn btn--primary btn--rounded">
+                                    <button class="user-address__btn btn btn--primary btn--rounded btn--small">
                                         <img src="./assets/icons/plus.svg" alt="">
                                         Add a new address
                                     </button>
                                 </div>
 
+                                <!-- Empty message -->
+                                <!-- <div class="user-address__message">
+                                    Not addess yet. <a class="user-address__link" href="#!">Add a new address</a>
+                                </div> -->
+
+
                                 <div class="user-address__list">
                                     <!-- Address card 1 -->
-                                    <article class="address-card">
+                                    <article class="address-card ">
                                         <div class="address-card__left">
                                             <div class="address-card__choose">
-                                                <!-- Custom checkbox -->
+                                                <label class="address-card__checkbox">
+                                                    <input type="checkbox" name="" class="address-card__checkbox-input"
+                                                        checked>
+                                                </label>
                                             </div>
                                             <div class="address-card__info">
                                                 <div class="address-card__title">
@@ -138,7 +147,7 @@
                                         <div class="address-card__right">
                                             <div class="address-card__ctrl">
                                                 <button class="address-card__ctrl-btn">
-                                                    <img src="./assets/icons/edit.svg" alt="">
+                                                    <img class="icon" src="./assets/icons/edit.svg" alt="">
                                                     Edit
                                                 </button>
                                             </div>
@@ -146,11 +155,14 @@
                                     </article>
 
                                     <!-- Address card 2 -->
-                                    <article class="address-card">
+                                    <article class="address-card ">
                                         <div class="address-card__left">
                                             <div class="address-card__choose">
-                                                <!-- Custom checkbox -->
+                                                <label class="address-card__checkbox">
+                                                    <input type="checkbox" name="" class="address-card__checkbox-input">
+                                                </label>
                                             </div>
+
                                             <div class="address-card__info">
                                                 <div class="address-card__title">
                                                     Imran Khan
@@ -174,7 +186,7 @@
                                         <div class="address-card__right">
                                             <div class="address-card__ctrl">
                                                 <button class="address-card__ctrl-btn">
-                                                    <img src="./assets/icons/edit.svg" alt="">
+                                                    <img class="icon" src="./assets/icons/edit.svg" alt="">
                                                     Edit
                                                 </button>
                                             </div>
@@ -186,6 +198,8 @@
                             <h2 class="cart-info__sub-heading">
                                 Items details
                             </h2>
+
+                            <div class="cart-info__separate"></div>
 
                             <div class="cart-info__list">
                                 <!-- Cart item 1 -->
@@ -208,7 +222,7 @@
                                             <div class="cart-item__ctrl cart-item__ctrl--md-block">
                                                 <div class="cart-item__input">
                                                     LavAzza
-                                                    <img class="icon" src="./assets/icons/arrow-down-2.svg" alt="">
+                                                    <img class="icon " src="./assets/icons/arrow-down-2.svg" alt="">
                                                 </div>
 
                                                 <div class="cart-item__input">
@@ -371,7 +385,7 @@
                                     <div class="col-8 col-xxl-7">
                                         <div class="cart-info__continue">
                                             <a href="./" class="cart-info__continue-link">
-                                                <img class="icon" class="cart-info__continue-icon"
+                                                <img class="icon cart-info__continue-icon"
                                                     src="./assets/icons/arrow-down-2.svg" alt="">
                                                 Continue Shopping
                                             </a>
