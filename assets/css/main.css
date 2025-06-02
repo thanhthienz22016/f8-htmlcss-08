@@ -3620,6 +3620,17 @@ html.dark {
     padding: 16px;
   }
 }
+.cart-info__heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.41;
+}
+.cart-info__sub-heading {
+  margin: 30px 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44;
+}
 .cart-info + .cart-info {
   margin-top: 30px;
 }
@@ -3830,6 +3841,64 @@ html.dark {
   margin-top: 10px;
   font-size: 1.4rem;
   line-height: 1.42;
+}
+
+.user-address__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user-address__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44;
+}
+.user-address__desc {
+  margin-top: 4px;
+  font-size: 1.5rem;
+  line-height: 1.46;
+}
+.user-address__btn {
+  gap: 10px;
+}
+.address-card {
+  margin-top: 30px;
+  display: flex;
+}
+.address-card__left {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+}
+.address-card__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44;
+}
+.address-card__desc {
+  margin-top: 4px;
+  font-size: 1.5rem;
+  line-height: 1.46;
+}
+.address-card__list {
+  margin-top: 20px;
+  display: flex;
+  gap: 30px;
+  font-size: 1.4rem;
+  line-height: 1.42;
+  list-style: disc inside;
+}
+.address-card__list-item {
+  margin-left: 8px;
+}
+.address-card__ctrl {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.address-card__ctrl-btn {
+  font-size: 1.8rem;
+  line-height: 1.44;
 }
 
 /*# sourceMappingURL=main.css.map */
