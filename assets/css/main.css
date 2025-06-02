@@ -178,8 +178,17 @@ select {
   -webkit-tap-highlight-color: transparent;
 }
 
-input {
+input,
+textarea {
   background: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-webkit-autofill:hover {
+  transition: background-color 1s 9999s;
+  -webkit-text-fill-color: #fff;
 }
 
 .icon {
@@ -2674,6 +2683,17 @@ html.dark {
   display: flex;
   gap: 30px;
 }
+@media (max-width: 767.98px) {
+  .form__row {
+    gap: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .form__row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 .form__row > * {
   flex: 1;
 }
@@ -2719,7 +2739,6 @@ html.dark {
   padding: 12px;
 }
 .form__text-area-input {
-  width: 100%;
   resize: none;
 }
 .form__text-input {
@@ -2735,6 +2754,7 @@ html.dark {
 }
 .form__input, .form__text-area-input {
   flex: 1;
+  width: 100%;
   height: 100%;
   font-size: 1.8rem;
   font-weight: 500;
@@ -3109,6 +3129,11 @@ html.dark {
   transition: opacity, visibility;
   transition-duration: 0.2s;
 }
+@media (max-width: 767.98px) {
+  .modal__btn {
+    flex: 1;
+  }
+}
 .modal.show {
   opacity: 1;
   visibility: visible;
@@ -3135,7 +3160,7 @@ html.dark {
 }
 .modal__body {
   padding-right: 20px;
-  max-height: calc(100vh - 200px);
+  max-height: calc(100vh - 180px);
   overflow-y: auto;
 }
 .modal__content {
@@ -3143,13 +3168,18 @@ html.dark {
   width: min(var(--content-width), 100% - 40px);
   background: var(--modal-bg);
   z-index: 1;
-  padding: 30px;
+  padding: 30px 10px 30px 30px;
   border-radius: 20px;
   box-shadow: 0px 20px 60px 10px var(--modal-shadow);
 }
 @media (max-width: 767.98px) {
   .modal__content {
     padding: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .modal__content {
+    padding: 20px 0 20px 20px;
   }
 }
 .modal--small .modal__content {
@@ -3173,6 +3203,7 @@ html.dark {
   justify-content: flex-end;
   flex-wrap: wrap;
   margin-top: 30px;
+  padding-right: 20px;
   gap: 30px;
 }
 @media (max-width: 767.98px) {
@@ -3180,9 +3211,9 @@ html.dark {
     gap: 20px;
   }
 }
-@media (max-width: 767.98px) {
-  .modal__btn {
-    flex: 1;
+@media (max-width: 575.98px) {
+  .modal__bottom {
+    margin-top: 20px;
   }
 }
 

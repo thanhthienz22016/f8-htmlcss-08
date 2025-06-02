@@ -17,6 +17,12 @@
     transition: opacity, visibility;
     transition-duration: 0.2s;
 
+    @include abstracts.screen(md) {
+        &__btn {
+            flex: 1;
+        }
+    }
+
     &.show {
         opacity: 1;
         visibility: visible;
@@ -49,7 +55,7 @@
 
     &__body {
         padding-right: 20px;
-        max-height: calc(100vh - 200px);
+        max-height: calc(100vh - 180px);
         overflow-y: auto;
     }
 
@@ -59,12 +65,16 @@
         background: var(--modal-bg);
         z-index: 1;
 
-        padding: 30px;
+        padding: 30px 10px 30px 30px;
         border-radius: 20px;
         box-shadow: 0px 20px 60px 10px var(--modal-shadow);
 
         @include abstracts.screen(md) {
             padding: 20px;
+        }
+
+        @include abstracts.screen(sm) {
+            padding: 20px 0 20px 20px;
         }
     }
 
@@ -93,16 +103,15 @@
         justify-content: flex-end;
         flex-wrap: wrap;
         margin-top: 30px;
+        padding-right: 20px;
         gap: 30px;
 
         @include abstracts.screen(md) {
             gap: 20px;
         }
-    }
 
-    @include abstracts.screen(md) {
-        &__btn {
-            flex: 1;
+        @include abstracts.screen(sm) {
+            margin-top: 20px;
         }
     }
 }

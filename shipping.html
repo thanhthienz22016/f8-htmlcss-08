@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -499,74 +499,75 @@
 
 
 
-    <!-- Modal: add new shopping address -->
+    <!-- Modal: add new shipping address -->
     <div class="modal show" id="add-new-address" style="--content-width: 650px">
         <div class="modal__content">
+            <form action="" class="form" autocomplete="off"></form>
             <h2 class="modal__heading">
                 Add new shopping address
             </h2>
             <div class="modal__body">
-                <form action="" class="form">
-                    <div class="form__row">
-                        <div class="form__group">
-                            <label for="name" class="form__label--small form__label">
-                                Name
-                            </label>
-                            <div class="form__text-input--small form__text-input">
-                                <input type="text" name="name" id="name" class="form__input" placeholder="Name" required
-                                    minlength="2">
-                                <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
-                            </div>
-                            <p class="form__error">Name must be at least 2 characters</p>
-                        </div>
 
-                        <div class="form__group">
-                            <label for="phone" class="form__label--small form__label">
-                                Phone
-                            </label>
-                            <div class="form__text-input--small form__text-input">
-                                <input type="tel" name="phone" id="phone" class="form__input" placeholder="Phone"
-                                    required minlength="10">
-                                <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
-                            </div>
-                            <p class="form__error">Phone must be at least 2 characters</p>
-                        </div>
-                    </div>
-
+                <div class="form__row">
                     <div class="form__group">
-                        <label for="address" class="form__label--small form__label">
-                            Addresss
-                        </label>
-                        <div class="form__text-area">
-                            <textarea name="address" id="address" class="form__text-area-input"
-                                placeholder="Address (Area and street)" required></textarea>
-                            <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
-                        </div>
-                        <p class="form__error">Address not empty</p>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="city" class="form__label--small form__label">
-                            City/District/Town
+                        <label for="name" class="form__label--small form__label">
+                            Name
                         </label>
                         <div class="form__text-input--small form__text-input">
-                            <input type="text" name="" class="form__input" id="city" placeholder="City/District/Town"
+                            <input type="text" name="name" id="name" class="form__input" placeholder="Name" required
+                                minlength="2">
+                            <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
+                        </div>
+                        <p class="form__error">Name must be at least 2 characters</p>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="phone" class="form__label--small form__label">
+                            Phone
+                        </label>
+                        <div class="form__text-input--small form__text-input">
+                            <input type="tel" name="phone" id="phone" class="form__input" placeholder="Phone" required
                                 minlength="10">
                             <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
                         </div>
-                        <p class="form__error">City/District/Town must be at least 2 characters</p>
+                        <p class="form__error">Phone must be at least 2 characters</p>
                     </div>
+                </div>
 
-                    <div class="form__group form__group--inline">
-                        <label class="form__checkbox">
-                            <input type="checkbox" name="" id="" class="form__checkbox-input d-none">
-
-                            <span class="form__checkbox-label">
-                                Set as default address
-                            </span>
-                        </label>
+                <div class="form__group">
+                    <label for="address" class="form__label--small form__label">
+                        Addresss
+                    </label>
+                    <div class="form__text-area">
+                        <textarea name="address" id="address" class="form__text-area-input"
+                            placeholder="Address (Area and street)" required></textarea>
+                        <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
                     </div>
-                </form>
+                    <p class="form__error">Address not empty</p>
+                </div>
+
+                <div class="form__group">
+                    <label for="city" class="form__label--small form__label">
+                        City/District/Town
+                    </label>
+                    <div class="form__text-input--small form__text-input">
+                        <input type="text" name="" class="form__input" id="city" placeholder="City/District/Town"
+                            minlength="10">
+                        <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
+                    </div>
+                    <p class="form__error">City/District/Town must be at least 2 characters</p>
+                </div>
+
+                <div class="form__group form__group--inline">
+                    <label class="form__checkbox">
+                        <input type="checkbox" name="" id="" class="form__checkbox-input d-none">
+
+                        <span class="form__checkbox-label">
+                            Set as default address
+                        </span>
+                    </label>
+                </div>
+
             </div>
             <div class="modal__bottom">
                 <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">
@@ -578,6 +579,8 @@
                     Create
                 </button>
             </div>
+
+            </form>
         </div>
 
         <div class="modal__overlay">
