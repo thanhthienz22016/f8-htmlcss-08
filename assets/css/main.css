@@ -1376,6 +1376,11 @@ html {
   --search-bar-bg: #fff;
   --review-card-bg: #fafafd;
   --text-content-hr-bg: #ebebeb;
+  --checkout-breadcrumb-bg: #fff;
+  --checkout-cart-info-bg: #fff;
+  --checkout-cart-info-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  --checkout-border-color: #d2d1d6;
+  --checkout-gift-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
 }
 @media (max-width: 991.98px) {
   html {
@@ -1457,6 +1462,11 @@ html.dark {
   --search-bar-bg: #171c28;
   --review-card-bg: #171c28;
   --text-content-hr-bg: #414349;
+  --checkout-breadcrumb-bg: #171c28;
+  --checkout-cart-info-bg: #171c28;
+  --checkout-cart-info-shadow: 0px 20px 60px 10px rgba(23, 28, 40, 0.2);
+  --checkout-border-color: #292e39;
+  --checkout-gift-shadow: 0px 20px 60px 10px rgba(23, 28, 40, 0.2);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -3520,7 +3530,7 @@ html.dark {
   padding-bottom: 40px;
 }
 .checkout-page__breadcrumbs {
-  background: #fff;
+  background: var(--checkout-breadcrumb-bg);
 }
 
 .checkout-container {
@@ -3535,8 +3545,8 @@ html.dark {
 .cart-info {
   padding: 30px;
   border-radius: 20px;
-  background: #fff;
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  background: var(--checkout-cart-info-bg);
+  box-shadow: var(--checkout-cart-info-shadow);
 }
 @media (max-width: 767.98px) {
   .cart-info {
@@ -3573,7 +3583,7 @@ html.dark {
 .cart-info__separate {
   margin: 30px 0;
   height: 1px;
-  background: #d2d1d6;
+  background: var(--checkout-border-color);
 }
 .cart-info__continue {
   height: 100%;
@@ -3606,11 +3616,12 @@ html.dark {
   display: flex;
   gap: 30px;
   padding: 30px 0;
-  border-bottom: 1px solid #d2d1d6;
+  border-bottom: 1px solid var(--checkout-border-color);
 }
 @media (max-width: 767.98px) {
   .cart-item {
     padding: 16px 0;
+    gap: 16px;
   }
   .cart-item:last-child {
     padding: 16px;
@@ -3711,6 +3722,7 @@ html.dark {
 }
 @media (max-width: 767.98px) {
   .cart-item__total-price {
+    margin-bottom: 16px;
     text-align: left;
   }
 }
@@ -3740,7 +3752,7 @@ html.dark {
   height: 76px;
   border-radius: 14px;
   background: rgba(118, 68, 225, 0.1);
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  box-shadow: var(--checkout-gift-shadow);
 }
 .gift-item__title {
   font-size: 1.8rem;
