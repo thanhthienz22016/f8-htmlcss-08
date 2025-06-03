@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Checkout | Grocerymart</title>
+    <title> Shipping | Grocerymart</title>
     <!-- Favicon links -->
     <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png">
@@ -59,21 +59,21 @@
             <div class="checkout-container ">
                 <!-- Breadcrumbs -->
                 <ul class="breadcrumbs checkout-page__breadcrumbs">
-                    <li class="form__option">
+                    <li>
                         <a href="./" class="breadcrumbs__link">
                             Home
                             <img class="icon" src="./assets/icons/arrow-right.svg" alt="">
                         </a>
                     </li>
 
-                    <li class="form__option">
+                    <li>
                         <a href="./checkout.html" class="breadcrumbs__link">
                             Checkout
                             <img class="icon" src="./assets/icons/arrow-right.svg" alt="">
                         </a>
                     </li>
 
-                    <li class="form__option">
+                    <li>
                         <a href="#!" class="breadcrumbs__link breadcrumbs__link--curent">
                             Shipping
                         </a>
@@ -437,7 +437,7 @@
                                 <span>$201.65</span>
                             </div>
 
-                            <a href="#!" class="cart-info__next-btn btn btn--primary btn--rounded ">
+                            <a href="./payment.html" class="cart-info__next-btn btn btn--primary btn--rounded ">
                                 Continue to checkout
                             </a>
                         </div>
@@ -477,17 +477,17 @@
     <div class="modal modal--small hide" id="delete-confirm">
         <!-- <button class="modal__close js-toggle" toggle-target="#delete-confirm">&times;</button> -->
         <div class="modal__content">
-            <div class="modal__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-            </div>
+            <p class="modal__text">
+                Do you want remove this item from shopping cart?
+            </p>
             <div class="modal__bottom">
-                <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#delete-confirm">
+                <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#delete-confirm">
                     Cancel
                 </button>
 
-                <button class="btn btn--small btn--primary modal__btn btn--no-margin js-toggle"
+                <button class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin js-toggle"
                     toggle-target="#delete-confirm">
-                    Confirm
+                    Delete
                 </button>
             </div>
         </div>
@@ -500,133 +500,137 @@
 
 
     <!-- Modal: add new shipping address -->
-    <div class="modal show" id="add-new-address" style="--content-width: 650px">
+    <div class="modal hide" id="add-new-address" style="--content-width: 650px">
         <div class="modal__content">
-            <form action="" class="form" autocomplete="off"></form>
-            <h2 class="modal__heading">
-                Add new shopping address
-            </h2>
-            <div class="modal__body">
+            <form action="" class="form" autocomplete="off">
+                <h2 class="modal__heading">
+                    Add new shopping address
+                </h2>
+                <div class="modal__body">
 
-                <div class="form__row">
-                    <div class="form__group">
-                        <label for="name" class="form__label--small form__label">
-                            Name
-                        </label>
-                        <div class="form__text-input--small form__text-input">
-                            <input type="text" name="name" id="name" class="form__input" placeholder="Name" required
-                                minlength="2">
-                            <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
-                        </div>
-                        <p class="form__error">Name must be at least 2 characters</p>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="phone" class="form__label--small form__label">
-                            Phone
-                        </label>
-                        <div class="form__text-input--small form__text-input">
-                            <input type="tel" name="phone" id="phone" class="form__input" placeholder="Phone" required
-                                minlength="10">
-                            <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
-                        </div>
-                        <p class="form__error">Phone must be at least 2 characters</p>
-                    </div>
-                </div>
-
-                <div class="form__group">
-                    <label for="address" class="form__label--small form__label">
-                        Addresss
-                    </label>
-                    <div class="form__text-area">
-                        <textarea name="address" id="address" class="form__text-area-input"
-                            placeholder="Address (Area and street)" required></textarea>
-                        <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
-                    </div>
-                    <p class="form__error">Address not empty</p>
-                </div>
-
-                <div class="form__group">
-                    <label for="city" class="form__label--small form__label">
-                        City/District/Town
-                    </label>
-                    <div class="form__text-input--small form__text-input">
-                        <input type="text" name="" class="form__input js-toggle" toggle-target="#city-dialog" id="city"
-                            placeholder="City/District/Town" minlength="10">
-                        <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
-
-                        <div class="form__select-dialog hide" id="city-dialog">
-                            <button class="form__close-dialog d-none d-sm-block js-toggle" toggle-target="#city-dialog">
-                                &times
-                            </button>
-                            <div class="form__search">
-                                <input type="text" placeholder="Search" class="form__search-input">
-                                <img src="./assets/icons/search.svg" alt="" class="form__search-icon icon">
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="name" class="form__label--small form__label">
+                                Name
+                            </label>
+                            <div class="form__text-input--small form__text-input">
+                                <input type="text" name="name" id="name" class="form__input" placeholder="Name" required
+                                    minlength="2">
+                                <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
                             </div>
+                            <p class="form__error">Name must be at least 2 characters</p>
+                        </div>
 
-                            <ul class="form__options-list">
-                                <li class="form__option">Ha Noi</li>
-                                <li class="form__option form__option--current">Ho Chi Minh</li>
-                                <li class="form__option">Da Nang</li>
-                                <li class="form__option">Ha Noi</li>
-                                <li class="form__option">Ho Chi Minh</li>
-                                <li class="form__option">Da Nang</li>
-                                <li class="form__option">Ha Noi</li>
-                                <li class="form__option">Ho Chi Minh</li>
-                                <li class="form__option">Da Nang</li>
-                                <li class="form__option">Ha Noi</li>
-                                <li class="form__option">Ho Chi Minh</li>
-                                <li class="form__option">Da Nang</li>
-                                <li class="form__option">Ha Noi</li>
-                                <li class="form__option">Ho Chi Minh</li>
-                                <li class="form__option">Da Nang</li>
-                                <li class="form__option">Ho Chi Minh</li>
-                                <li class="form__option">Da Nang</li>
-                                <li class="form__option">Ha Noi</li>
-                                <li class="form__option">Ho Chi Minh</li>
-                                <li class="form__option">Da Nang</li>
-                                <li class="form__option">Ho Chi Minh</li>
-                                <li class="form__option">Da Nang</li>
-                                <li class="form__option">Ha Noi</li>
-                                <li class="form__option">Ho Chi Minh</li>
-                                <li class="form__option">Da Nang</li>
-                                <li class="form__option">Ho Chi Minh</li>
-                                <li class="form__option">Da Nang</li>
-                                <li class="form__option">Ha Noi</li>
-                                <li class="form__option">Ho Chi Minh</li>
-                                <li class="form__option">Da Nang</li>
-                                <li class="form__option">Ho Chi Minh</li>
-                                <li class="form__option">Da Nang</li>
-                                <li class="form__option">Ha Noi</li>
-                                <li class="form__option">Ho Chi Minh</li>
-                                <li class="form__option">Da Nang</li>
-                            </ul>
+                        <div class="form__group">
+                            <label for="phone" class="form__label--small form__label">
+                                Phone
+                            </label>
+                            <div class="form__text-input--small form__text-input">
+                                <input type="tel" name="phone" id="phone" class="form__input" placeholder="Phone"
+                                    required minlength="10">
+                                <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
+                            </div>
+                            <p class="form__error">Phone must be at least 2 characters</p>
                         </div>
                     </div>
-                    <p class="form__error">City/District/Town must be at least 2 characters</p>
+
+                    <div class="form__group">
+                        <label for="address" class="form__label--small form__label">
+                            Addresss
+                        </label>
+                        <div class="form__text-area">
+                            <textarea name="address" id="address" class="form__text-area-input"
+                                placeholder="Address (Area and street)" required></textarea>
+                            <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
+                        </div>
+                        <p class="form__error">Address not empty</p>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="city" class="form__label--small form__label">
+                            City/District/Town
+                        </label>
+                        <div class="form__text-input--small form__text-input">
+                            <input type="text" name="" class="form__input js-toggle" toggle-target="#city-dialog"
+                                id="city" placeholder="City/District/Town" minlength="10">
+                            <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
+
+                            <!-- Select dialog -->
+                            <div class="form__select-dialog hide" id="city-dialog">
+                                <h2 class="form__dialog-heading d-none d-md-block">
+                                    City/District/Town
+                                </h2>
+                                <button class="form__close-dialog d-none d-sm-block js-toggle"
+                                    toggle-target="#city-dialog">
+                                    &times
+                                </button>
+                                <div class="form__search">
+                                    <input type="text" placeholder="Search" class="form__search-input">
+                                    <img src="./assets/icons/search.svg" alt="" class="form__search-icon icon">
+                                </div>
+
+                                <ul class="form__options-list">
+                                    <li class="form__option">Ha Noi</li>
+                                    <li class="form__option form__option--current">Ho Chi Minh</li>
+                                    <li class="form__option">Da Nang</li>
+                                    <li class="form__option">Ha Noi</li>
+                                    <li class="form__option">Ho Chi Minh</li>
+                                    <li class="form__option">Da Nang</li>
+                                    <li class="form__option">Ha Noi</li>
+                                    <li class="form__option">Ho Chi Minh</li>
+                                    <li class="form__option">Da Nang</li>
+                                    <li class="form__option">Ha Noi</li>
+                                    <li class="form__option">Ho Chi Minh</li>
+                                    <li class="form__option">Da Nang</li>
+                                    <li class="form__option">Ha Noi</li>
+                                    <li class="form__option">Ho Chi Minh</li>
+                                    <li class="form__option">Da Nang</li>
+                                    <li class="form__option">Ho Chi Minh</li>
+                                    <li class="form__option">Da Nang</li>
+                                    <li class="form__option">Ha Noi</li>
+                                    <li class="form__option">Ho Chi Minh</li>
+                                    <li class="form__option">Da Nang</li>
+                                    <li class="form__option">Ho Chi Minh</li>
+                                    <li class="form__option">Da Nang</li>
+                                    <li class="form__option">Ha Noi</li>
+                                    <li class="form__option">Ho Chi Minh</li>
+                                    <li class="form__option">Da Nang</li>
+                                    <li class="form__option">Ho Chi Minh</li>
+                                    <li class="form__option">Da Nang</li>
+                                    <li class="form__option">Ha Noi</li>
+                                    <li class="form__option">Ho Chi Minh</li>
+                                    <li class="form__option">Da Nang</li>
+                                    <li class="form__option">Ho Chi Minh</li>
+                                    <li class="form__option">Da Nang</li>
+                                    <li class="form__option">Ha Noi</li>
+                                    <li class="form__option">Ho Chi Minh</li>
+                                    <li class="form__option">Da Nang</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="form__error">City/District/Town must be at least 2 characters</p>
+                    </div>
+
+                    <div class="form__group form__group--inline">
+                        <label class="form__checkbox">
+                            <input type="checkbox" name="" id="" class="form__checkbox-input d-none">
+
+                            <span class="form__checkbox-label">
+                                Set as default address
+                            </span>
+                        </label>
+                    </div>
+
                 </div>
+                <div class="modal__bottom">
+                    <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">
+                        Cancel
+                    </button>
 
-                <div class="form__group form__group--inline">
-                    <label class="form__checkbox">
-                        <input type="checkbox" name="" id="" class="form__checkbox-input d-none">
-
-                        <span class="form__checkbox-label">
-                            Set as default address
-                        </span>
-                    </label>
+                    <button class="btn btn--small btn--primary modal__btn btn--no-margin">
+                        Create
+                    </button>
                 </div>
-
-            </div>
-            <div class="modal__bottom">
-                <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">
-                    Cancel
-                </button>
-
-                <button class="btn btn--small btn--primary modal__btn btn--no-margin js-toggle"
-                    toggle-target="#add-new-address">
-                    Create
-                </button>
-            </div>
 
             </form>
         </div>

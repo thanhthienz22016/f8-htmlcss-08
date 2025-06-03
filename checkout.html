@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -349,20 +349,21 @@
         load("#footer", "./templates/footer.html")
     </script>
 
-    <!-- modal / modal -->
-    <div class="modal hide" id="delete-confirm">
+    <!-- Modal: confirm remove shopping cart item -->
+    <div class="modal modal--small hide" id="delete-confirm">
+        <!-- <button class="modal__close js-toggle" toggle-target="#delete-confirm">&times;</button> -->
         <div class="modal__content">
-            <div class="modal__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-            </div>
+            <p class="modal__text">
+                Do you want remove this item from shopping cart?
+            </p>
             <div class="modal__bottom">
-                <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#delete-confirm">
+                <button class="btn btn--outline btn--small  modal__btn js-toggle" toggle-target="#delete-confirm">
                     Cancel
                 </button>
 
-                <button class="btn btn--small btn--primary modal__btn btn--no-margin js-toggle"
+                <button class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin js-toggle"
                     toggle-target="#delete-confirm">
-                    Confirm
+                    Delete
                 </button>
             </div>
         </div>
