@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
 
 <head>
     <meta charset="UTF-8">
@@ -59,21 +59,21 @@
             <div class="checkout-container ">
                 <!-- Breadcrumbs -->
                 <ul class="breadcrumbs checkout-page__breadcrumbs">
-                    <li>
+                    <li class="form__option">
                         <a href="./" class="breadcrumbs__link">
                             Home
                             <img class="icon" src="./assets/icons/arrow-right.svg" alt="">
                         </a>
                     </li>
 
-                    <li>
+                    <li class="form__option">
                         <a href="./checkout.html" class="breadcrumbs__link">
                             Checkout
                             <img class="icon" src="./assets/icons/arrow-right.svg" alt="">
                         </a>
                     </li>
 
-                    <li>
+                    <li class="form__option">
                         <a href="#!" class="breadcrumbs__link breadcrumbs__link--curent">
                             Shipping
                         </a>
@@ -551,9 +551,54 @@
                         City/District/Town
                     </label>
                     <div class="form__text-input--small form__text-input">
-                        <input type="text" name="" class="form__input" id="city" placeholder="City/District/Town"
-                            minlength="10">
+                        <input type="text" name="" class="form__input js-toggle" toggle-target="#city-dialog" id="city"
+                            placeholder="City/District/Town" minlength="10">
                         <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
+
+                        <div class="form__select-dialog" id="city-dialog" hide>
+                            <div class="form__search">
+                                <input type="text" placeholder="Search" class="form__search-input">
+                                <img src="./assets/icons/search.svg" alt="" class="form__search-icon">
+                            </div>
+
+                            <ul class="form__options-list">
+                                <li class="form__option">Ha Noi</li>
+                                <li class="form__option form__option--current">Ho Chi Minh</li>
+                                <li class="form__option">Da Nang</li>
+                                <li class="form__option">Ha Noi</li>
+                                <li class="form__option">Ho Chi Minh</li>
+                                <li class="form__option">Da Nang</li>
+                                <li class="form__option">Ha Noi</li>
+                                <li class="form__option">Ho Chi Minh</li>
+                                <li class="form__option">Da Nang</li>
+                                <li class="form__option">Ha Noi</li>
+                                <li class="form__option">Ho Chi Minh</li>
+                                <li class="form__option">Da Nang</li>
+                                <li class="form__option">Ha Noi</li>
+                                <li class="form__option">Ho Chi Minh</li>
+                                <li class="form__option">Da Nang</li>
+                                <li class="form__option">Ho Chi Minh</li>
+                                <li class="form__option">Da Nang</li>
+                                <li class="form__option">Ha Noi</li>
+                                <li class="form__option">Ho Chi Minh</li>
+                                <li class="form__option">Da Nang</li>
+                                <li class="form__option">Ho Chi Minh</li>
+                                <li class="form__option">Da Nang</li>
+                                <li class="form__option">Ha Noi</li>
+                                <li class="form__option">Ho Chi Minh</li>
+                                <li class="form__option">Da Nang</li>
+                                <li class="form__option">Ho Chi Minh</li>
+                                <li class="form__option">Da Nang</li>
+                                <li class="form__option">Ha Noi</li>
+                                <li class="form__option">Ho Chi Minh</li>
+                                <li class="form__option">Da Nang</li>
+                                <li class="form__option">Ho Chi Minh</li>
+                                <li class="form__option">Da Nang</li>
+                                <li class="form__option">Ha Noi</li>
+                                <li class="form__option">Ho Chi Minh</li>
+                                <li class="form__option">Da Nang</li>
+                            </ul>
+                        </div>
                     </div>
                     <p class="form__error">City/District/Town must be at least 2 characters</p>
                 </div>

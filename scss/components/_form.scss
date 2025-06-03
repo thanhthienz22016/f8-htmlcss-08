@@ -63,11 +63,6 @@ $error-color: #ed4337;
         border-radius: 10px;
         border: 1.5px solid #d2d1d6;
 
-        &--small {
-            border: 1.5px solid #d2d1d6;
-            border-radius: 8px;
-        }
-
         &:focus-within {
             border-color: #77dae6;
         }
@@ -83,6 +78,7 @@ $error-color: #ed4337;
     }
 
     &__text-input {
+        position: relative;
         height: 50px;
 
         &--small {
@@ -118,6 +114,68 @@ $error-color: #ed4337;
             height: 18px;
             object-fit: contain;
             margin-left: 12px;
+        }
+    }
+
+    &__select-dialog {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background: #fff;
+        padding: 10px 0px;
+        border: 1px solid #d2d1d6;
+        border-radius: 10px;
+        bottom: 40px;
+        left: 10px;
+        min-width: 230px;
+        max-height: 310px;
+
+        opacity: 0;
+        visibility: hidden;
+        translate: 0 -8px;
+        transition: opacity, visibility, translate;
+        transition-duration: 0.3s;
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            translate: 0;
+        }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #d2d1d6;
+        padding: 0 20px 10px;
+
+        &-input {
+            flex: 1;
+        }
+
+        &-icon {
+            width: 18px;
+        }
+    }
+
+    &__options-list {
+        flex: 1;
+        margin-top: 10px;
+        overflow-y: auto;
+    }
+
+    &__option {
+        padding: 8px 20px;
+        font-size: 1.4rem;
+
+        &:not(&--current):hover {
+            background: #ebebeb;
+            cursor: pointer;
+        }
+
+        &--current {
+            font-weight: 500;
+            background: rgba($color: #ffb700, $alpha: 0.5);
         }
     }
 
