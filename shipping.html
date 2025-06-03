@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -555,10 +555,13 @@
                             placeholder="City/District/Town" minlength="10">
                         <img src="./assets/icons/form-error.svg" alt="" class=" form__input-icon-error">
 
-                        <div class="form__select-dialog" id="city-dialog" hide>
+                        <div class="form__select-dialog hide" id="city-dialog">
+                            <button class="form__close-dialog d-none d-sm-block js-toggle" toggle-target="#city-dialog">
+                                &times
+                            </button>
                             <div class="form__search">
                                 <input type="text" placeholder="Search" class="form__search-input">
-                                <img src="./assets/icons/search.svg" alt="" class="form__search-icon">
+                                <img src="./assets/icons/search.svg" alt="" class="form__search-icon icon">
                             </div>
 
                             <ul class="form__options-list">

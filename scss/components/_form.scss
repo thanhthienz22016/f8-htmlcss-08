@@ -121,8 +121,8 @@ $error-color: #ed4337;
         display: flex;
         flex-direction: column;
         position: absolute;
-        background: #fff;
-        padding: 10px 0px;
+        background: var(--form-select-dialog-bg);
+        padding-bottom: 10px;
         border: 1px solid #d2d1d6;
         border-radius: 10px;
         bottom: 40px;
@@ -135,6 +135,16 @@ $error-color: #ed4337;
         translate: 0 -8px;
         transition: opacity, visibility, translate;
         transition-duration: 0.3s;
+        box-shadow: 0 0 5px var(--form-select-dialog-shadow);
+        z-index: 1;
+
+        @include abstracts.screen(sm) {
+            position: fixed;
+            max-width: initial;
+            max-height: initial;
+            inset: 0;
+            border-radius: 0;
+        }
 
         &.show {
             opacity: 1;
@@ -146,36 +156,71 @@ $error-color: #ed4337;
     &__search {
         display: flex;
         align-items: center;
+        flex-shrink: 0;
+        height: 38px;
         border-bottom: 1px solid #d2d1d6;
-        padding: 0 20px 10px;
+        padding: 0 20px;
+
+        @include abstracts.screen(lg) {
+            height: 42px;
+        }
+
+        @include abstracts.screen(sm) {
+            flex-direction: row-reverse;
+            margin-top: 30px;
+        }
 
         &-input {
             flex: 1;
+            height: 100%;
+            font-size: 1.6rem;
+            @include abstracts.screen(sm) {
+                padding-left: 8px;
+            }
         }
 
         &-icon {
-            width: 18px;
+            width: 16px;
+            margin-left: 10px;
+
+            @include abstracts.screen(sm) {
+                margin-left: 0;
+            }
         }
+    }
+
+    &__close-dialog {
+        font-size: 3rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 2px 18px;
+        opacity: 0.8;
     }
 
     &__options-list {
         flex: 1;
         margin-top: 10px;
         overflow-y: auto;
+        overscroll-behavior: contain;
     }
 
     &__option {
         padding: 8px 20px;
         font-size: 1.4rem;
 
+        @include abstracts.screen(lg) {
+            padding: 14px 20px;
+        }
+
         &:not(&--current):hover {
-            background: #ebebeb;
+            background: var(--form-option-hover-bg);
             cursor: pointer;
         }
 
         &--current {
             font-weight: 500;
-            background: rgba($color: #ffb700, $alpha: 0.5);
+            background: rgba($color: #ffb700, $alpha: 0.6);
         }
     }
 
