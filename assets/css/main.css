@@ -2961,6 +2961,12 @@ html.dark {
   font-weight: 500;
   line-height: 1.45;
 }
+.form__label--medium {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44;
+}
 .form__label--small {
   margin-bottom: 10px;
   font-size: 1.4rem;
@@ -3849,6 +3855,14 @@ html.dark {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.44;
+}
+.cart-info__desc {
+  margin-top: 6px;
+  font-size: 1.5rem;
+  line-height: 1.46;
+}
+.cart-info__form {
+  margin-bottom: 30px;
 }
 .cart-info + .cart-info {
   margin-top: 30px;
