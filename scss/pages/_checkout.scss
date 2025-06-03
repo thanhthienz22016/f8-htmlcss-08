@@ -28,10 +28,22 @@
         padding: 16px;
     }
 
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     &__heading {
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 1.41;
+
+        &--lv2 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 1.45;
+        }
     }
 
     &__sub-heading {
@@ -107,6 +119,32 @@
 
     &__next-btn {
         margin-top: 30px;
+    }
+
+    &__edit-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.8rem;
+        line-height: 1.44;
+    }
+
+    &__checkbox {
+        &-input {
+            appearance: none;
+
+            &::before {
+                content: url(../icons/checkbox-uncheck.svg);
+            }
+
+            &:not(:checked)::before {
+                filter: var(--icon-color);
+            }
+
+            &:checked::before {
+                content: url(../icons/checkbox-checked.svg);
+            }
+        }
     }
 }
 
@@ -339,9 +377,6 @@
         gap: 16px;
     }
 
-    &__info {
-    }
-
     &__title {
         font-size: 1.8rem;
         font-weight: 500;
@@ -377,28 +412,68 @@
         height: 100%;
         display: flex;
         align-items: flex-end;
+    }
+}
 
-        &-btn {
-            font-size: 1.8rem;
-            line-height: 1.44;
-        }
+.payment-item {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #f6f6f6;
+    gap: 20px;
+
+    &--pointer {
+        cursor: pointer;
+    }
+
+    &__thumb {
+        width: 70px;
+        height: 54px;
+        object-fit: cover;
+    }
+
+    &__content {
+        flex: 1;
+    }
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+    }
+
+    &__desc {
+        margin-top: 4px;
+    }
+
+    &__desc,
+    &__detail {
+        font-size: 1.5rem;
+        line-height: 1.46;
+    }
+
+    &__detail {
+        margin-right: -8px;
+        padding: 8px;
+        color: #0071dc;
     }
 
     &__checkbox {
-        &-input {
-            appearance: none;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 14px;
 
-            &::before {
-                content: url(../icons/checkbox-uncheck.svg);
-            }
-
-            &:not(:checked)::before {
-                filter: var(--icon-color);
-            }
-
-            &:checked::before {
-                content: url(../icons/checkbox-checked.svg);
-            }
+        &-input:checked ~ .payment-item__cost {
+            color: inherit;
         }
+    }
+
+    &__cost {
+        color: #9e9da8;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
     }
 }
