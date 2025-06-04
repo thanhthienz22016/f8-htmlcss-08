@@ -1,6 +1,7 @@
 .payment-card {
     position: relative;
     height: 100%;
+
     padding: 20px;
     color: #fff;
     border-radius: 10px;
@@ -94,6 +95,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 170px;
     gap: 14px;
 
     border-radius: 10px;

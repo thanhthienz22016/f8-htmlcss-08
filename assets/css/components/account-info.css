@@ -2,10 +2,11 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  height: 100%;
   padding: 10px;
   border-radius: 10px;
   border-radius: 10px;
-  background: #f6f6f6;
+  background: var(--accoun-info-bg);
 }
 .account-info__icon {
   display: flex;
@@ -14,7 +15,8 @@
   width: 54px;
   height: 54px;
   border-radius: 8px;
-  background: #fff;
+  background: var(--accoun-info-icon-bg);
+  flex-shrink: 0;
 }
 .account-info__title {
   font-size: 1.5rem;
