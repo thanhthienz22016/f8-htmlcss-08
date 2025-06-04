@@ -83,3 +83,9 @@ strong,
 b {
     font-weight: 600;
 }
+
+.separate {
+    margin: var(--margin) 0;
+    height: 1px;
+    background: #d2d1d6;
+}

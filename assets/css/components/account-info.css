@@ -1,0 +1,30 @@
+.account-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border-radius: 10px;
+  background: #f6f6f6;
+}
+.account-info__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 8px;
+  background: #fff;
+}
+.account-info__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.46;
+}
+.account-info__desc {
+  margin-top: 6px;
+  font-size: 1.4rem;
+  line-height: 1.42;
+}
+
+/*# sourceMappingURL=account-info.css.map */
